@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script src="./index.js" defer></script>
+  <title>QR code generator</title>
+  <link rel="icon" type="image/x-icon" href="./qr-code.png">
+</head>
+
+<body>
+  
+
+  <div class="head">
+    <h3>Qr Code Generator</h3>
+  </div>
+
+  <div class="content">
+    <div>
+      <h3>Qr Code Generator</h3>
+        <p>Create Qr codes That allows users acceess your websites and applications </p>
+        <p>Enter your url below to generate a new Qr code and dowload the image</p>
+    </div>
+   </div> 
+   <label for="colorpicker">Color Picker:</label>
+   
+   <input type="color" id="colorpicker" value="#0000ff">
+ 
+
+    <form id="generate-form" class="form">
+      <input type="url" id="url" placeholder="Enter your link"><br>
+      <select id="size">
+        <option value="50">50 x 50</option>
+        <option value="100">100 x 100</option>
+        <option value="150">150 x 150</option>
+        <option value="200">200 x 200</option>
+        <option value="250">250 x 250</option>
+        <option value="300">300 x 300</option>
+        <option value="400">400 x 400</option>
+        <option value="500">500 x 500</option>
+     </select> <br> 
+
+    
+
+      <button id="button" type="submit" class="button">Generate QR</button><br>
+
+      <div class="spinning" id="spinner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4335 4335" width="100" height="100">
+          <path fill="#973c3c" d="M3346 1077c41,0 75,34 75,75 0,41 -34,75 -75,75 -41,0 -75,-34 -75,-75 0,-41 34,-75 75,-75zm-1198 -824c193,0 349,156 349,349 0,193 -156,349 -349,349 -193,0 -349,-156 -349,-349 0,-193 156,-349 349,-349zm-1116 546c151,0 274,123 274,274 0,151 -123,274 -274,274 -151,0 -274,-123 -274,-274 0,-151 123,-274 274,-274zm-500 1189c134,0 243,109 243,243 0,134 -109,243 -243,243 -134,0 -243,-109 -243,-243 0,-134 109,-243 243,-243zm500 1223c121,0 218,98 218,218 0,121 -98,218 -218,218 -121,0 -218,-98 -218,-218 0,-121 98,-218 218,-218zm1116 434c110,0 200,89 200,200 0,110 -89,200 -200,200 -110,0 -200,-89 -200,-200 0,-110 89,-200 200,-200zm1145 -434c81,0 147,66 147,147 0,81 -66,147 -147,147 -81,0 -147,-66 -147,-147 0,-81 66,-147 147,-147zm459 -1098c65,0 119,53 119,119 0,65 -53,119 -119,119 -65,0 -119,-53 -119,-119 0,-65 53,-119 119,-119z"
+          />
+        </svg>
+      </div>
+
+      <div id="qr-output">
+  
+      </div><br>
+      
+      <button id="save" type="submit" class="save">Save generated Qr</button>
+    </form>
+
+   
+  </body>
+</html>

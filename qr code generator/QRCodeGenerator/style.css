@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Raleway:wght@100;200;300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.head{
+  background-color: rgb(215, 64, 122);
+  color: White;
+  text-align:center;
+  padding-top: 8px;
+  height: 40px;
+}
+
+.content{
+  text-align: center;
+  padding: 20px;
+  line-height: 2em;
+  font-size: x-large;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  /* justify-content:space-evenly; */
+  align-items: center;
+}
+
+.form > input,select,.button,.save{
+  padding: 8px;
+}
+
+/* .button{
+  
+} */
+
+ 
+.spinning{
+  display: none;
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
