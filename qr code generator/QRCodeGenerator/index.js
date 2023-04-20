@@ -1,6 +1,7 @@
 const form = document.getElementById("generate-form");
 const qr = document.getElementById("goes-in");
 const colorPicker = document.getElementById('colorpicker')
+const save = socument.getElementById('save')
 
 const onGenerate = (e) => {
   e.preventDefault();
@@ -18,6 +19,8 @@ const onGenerate = (e) => {
 
       generateQRCode(url, size);
     }, 1000);
+
+
   }
 };
 
@@ -27,7 +30,6 @@ const generateQRCode = (url, size) => {
     width: size,
     height: size,
     colorDark: colorPicker.value,
-    // colorLight: "#ffffff",
   });
 };
 
