@@ -33,6 +33,15 @@ const generateQRCode = (url, size) => {
   });
 };
 
+
+// create a download link for an image
+const qrcode = "";
+const link = document.createElement("a");
+link.href = imgUrl;
+link.download = "myImage.jpg";
+document.body.appendChild(link);
+link.click();
+
 const showSpinner = () => {
   document.getElementById("spinner").style.display = "block";
 };
