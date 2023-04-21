@@ -34,11 +34,11 @@ const generateQRCode = (url, size) => {
 };
 
 
-// create a download link for an image
+// create a download link for QR image
 const qrcode = "";
 const link = document.createElement("a");
 link.href = imgUrl;
-link.download = "myImage.jpg";
+link.download = "qrcode.jpg";
 document.body.appendChild(link);
 link.click();
 
