@@ -18,7 +18,7 @@ const onGenerate = (e) => {
       hideSpinner();
 
       generateQRCode(url, size);
-    }, 1000);
+    }, 2000);
 
 
   }
