@@ -34,13 +34,13 @@ const generateQRCode = (url, size) => {
 };
 
 
-// create a download link for QR image
 const qrcode = "";
 const link = document.createElement("a");
 link.href = imgUrl;
 link.download = "qrcode.jpg";
 document.body.appendChild(link);
 link.click();
+
 
 const showSpinner = () => {
   document.getElementById("spinner").style.display = "block";
