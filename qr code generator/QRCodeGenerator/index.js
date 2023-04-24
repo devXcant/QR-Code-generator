@@ -19,7 +19,7 @@ const onGenerate = (e) => {
     setTimeout(() => {
       hideSpinner();
 
-//       document.getElementById("qr-output").innerHTML = "";
+      document.getElementById("qr-output").innerHTML = "";
       generateQRCode(url, size);
     }, 1000);
   }
