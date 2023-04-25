@@ -3,13 +3,19 @@ const form = document.getElementById("generate-form");
 const qr = document.getElementById("goes-in");
 const colorPicker = document.getElementById('colorpicker')
 const save = document.getElementById('save')
+const output = document.getElementById("qr-output")
 
 
 const onGenerate = (e) => {
   e.preventDefault();
 
   const url = document.getElementById("url").value;
+  const urlMain = document.getElementById("url")
   const size = document.getElementById("size").value;
+
+  urlMain.addEventListener('click', ()=>{
+    output.innerHTML= '';
+  })
 
   if (url === "") {
     alert("please enter url");
@@ -19,7 +25,7 @@ const onGenerate = (e) => {
     setTimeout(() => {
       hideSpinner();
 
-      document.getElementById("qr-output").innerHTML = "";
+      output.innerHTML = '';
       generateQRCode(url, size);
     }, 1000);
   }
@@ -34,14 +40,22 @@ const generateQRCode = (url, size) => {
   });
 };
 
-const onSave = () => {
-  const imgUrl = qr.querySelector("img").src;
-  const link = document.createElement("a");
-  link.href = imgUrl;
-  link.download = "qrcode.jpg";
-  // document.body.appendChild(link);
-  link.click();
+
+save.addEventListener('click', () => {
+  const canvas = document.querySelector('#qr-output canvas');
+  const img = canvas.toDataURL('image/png');
+  downloadImage(img, 'qr-code.png');
+});
+
+const downloadImage = (data, filename = 'qr-code.png') => {
+  const a = document.createElement('a');
+  a.href = data;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 };
+
 
 const showSpinner = () => {
   document.getElementById("spinner").style.display = "block";
@@ -52,4 +66,4 @@ const hideSpinner = () => {
 };
 
 form.addEventListener("submit", onGenerate);
-save.addEventListener("click", onSave);
+

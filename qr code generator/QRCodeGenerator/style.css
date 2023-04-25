@@ -8,7 +8,7 @@
 }
 
 .head{
-  background-color: rgb(215, 64, 122);
+  background-color: rgb(107, 89, 96);
   color: White;
   text-align:center;
   padding-top: 8px;
@@ -33,10 +33,9 @@
   padding: 8px;
 }
 
-/* .button{
-  
-} */
-
+#colorpicker{
+  margin: 7px;
+}
  
 .spinning{
   display: none;

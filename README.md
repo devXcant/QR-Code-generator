@@ -12,5 +12,5 @@ This would help users to generate Qr codes for their
 - Select the size of the Qr code needed
 - Select the  Qr code color you want, using the color picker tool
 - Generate the Qr code
-- Download or Share it
+- Download the QR generated
 
